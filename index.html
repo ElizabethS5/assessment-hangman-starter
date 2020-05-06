@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hangman</title>
-  <link rel="stylesheet" href="./assets/style.css">
-</head>
-<body>
-  <main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <h1>Hangman</h1>
+    <main>
+      <fieldset>
+        <label for="letter-input">Enter Letter Here:</label>
+        <input
+          type="text"
+          name="letter-input"
+          id="letter-input"
+          maxlength="1"
+        />
+        <button id="letter-submit-button">Guess Letter</button>
+      </fieldset>
+      <div id="word-to-guess">Placeholder</div>
+      <div id="letters-attempted">
+        Failed Guesses:
+        <br />
+      </div>
+      <div>
+        Guesses Remaining:
+        <span id="guesses-left"></span>
+      </div>
+      <div id="message"></div>
+    </main>
 
-    <div id="word-to-guess">Placeholder</div>
-    <div id="letters-attempted"></div>
-    
-    <fieldset>
-      <label for="letter-input">Enter Letter Here:</label>
-      <input type="text" name="letter-input" id="letter-input" maxlength="1">
-      <button id="letter-submit-button"></button>
-    </fieldset>
-
-  </main>
-
-  <script src="./assets/generateRandomWordToGuess.js"></script>
-  <script src="./assets/main.js"></script>
-</body>
+    <script src="./assets/generateRandomWordToGuess.js"></script>
+    <script src="./assets/main.js"></script>
+  </body>
 </html>
