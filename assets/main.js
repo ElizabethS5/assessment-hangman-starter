@@ -15,7 +15,7 @@ guessesLeftElement.innerHTML = remainingGuesses;
 letterSubmitButton.addEventListener("click", function () {
   let updateCurrent = "";
   let guess = letterInputElement.value;
-  if (answer.includes(guess)) {
+  if (answer.toLowerCase().includes(guess)) {
     for (let i = 0; i < answer.length; i += 1) {
       if (guess.toLowerCase() === answer[i].toLowerCase()) {
         updateCurrent += answer[i];
