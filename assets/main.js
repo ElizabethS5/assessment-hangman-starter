@@ -33,7 +33,6 @@ letterSubmitButton.addEventListener("click", function () {
   }
 
   wordToGuessElement.innerHTML = current;
-  updateCurrent = "";
   letterInputElement.value = "";
   checkGameOver();
 });
