@@ -26,13 +26,12 @@ letterSubmitButton.addEventListener("click", function () {
       }
     }
     current = updateCurrent;
+    wordToGuessElement.innerHTML = current;
   } else {
     lettersAttemptedElement.innerHTML += guess;
     remainingGuesses--;
     guessesLeftElement.innerHTML = remainingGuesses;
   }
-
-  wordToGuessElement.innerHTML = current;
   letterInputElement.value = "";
   checkGameOver();
 });
